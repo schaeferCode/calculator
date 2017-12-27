@@ -9,9 +9,9 @@ const server = app.listen(port, err => {
   if (err) {
     console.log(err);
   } else {
-    open('http://localhost:${port}');
+    // open('http://localhost:${port}');
     console.log(`Listening on port ${port}`);
   }
 });
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, '/../dist')));
