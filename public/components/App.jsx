@@ -26,7 +26,18 @@ class App extends React.Component {
         input: '',
         output: ''
       });
-    } else {
+    } else if (value === '-/+') {
+      this.setState({
+        input: eval(this.state.input * -1).toString(),
+        output: eval(this.state.output * -1).toString()
+      })
+    } else if (value === '%') {
+      this.setState({
+        input: eval(this.state.input / 100).toString(),
+        output: eval(this.state.output / 100).toString()
+      })
+    }
+    else {
       this.setState({ 
         input: this.state.input + value,
         output: value 
@@ -37,9 +48,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="frame">
-        <div className="calculator-title">
-          React Calculator
-        </div>
         <Screen output={this.state.output}/>
         <div className="button-row">
           <Button label={'C'} handleClick={this.handleClick} type='action' />

@@ -1,3 +1,23 @@
-body {
-  background-color: white;
+.screen {
+  width: 200px;
+  height: 100px;
+  background-color: black;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.output {
+  color: white;
+  font-size: 40px;
+  text-align: right;;
+  vertical-align: text-bottom;
+}
+.button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.action-button {
+  background-color: orange;
+}
+#zero {
+  width: 100px;
 }
